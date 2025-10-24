@@ -1,0 +1,45 @@
+{
+  "name": "CodeGeneration",
+  "type": "object",
+  "properties": {
+    "prompt": {
+      "type": "string",
+      "description": "What the user asked for"
+    },
+    "generated_code": {
+      "type": "string",
+      "description": "The generated Roblox Lua code"
+    },
+    "script_type": {
+      "type": "string",
+      "enum": [
+        "Script",
+        "LocalScript",
+        "ModuleScript"
+      ],
+      "description": "Type of script"
+    },
+    "script_location": {
+      "type": "string",
+      "description": "Where to place the script in Roblox Studio"
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "script",
+        "gui",
+        "tool",
+        "game_mechanic",
+        "animation",
+        "sound",
+        "other"
+      ],
+      "default": "script",
+      "description": "Category of the generated code"
+    }
+  },
+  "required": [
+    "prompt",
+    "generated_code"
+  ]
+}
